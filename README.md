@@ -2,7 +2,7 @@
 
 **Widget:** `Scaffold` — the structural skeleton of a Flutter screen that hosts a top bar, a main content area and a floating action button without manual positioning.
 
-**In-class presentation date:** [add your date]
+**In-class presentation date:** September 28, 2026
 
 ## Use Case
 Every mobile screen requires a reliable structural skeleton so that UI elements do not overlap each other or get cut off by device status bars and notches. In this demo, I created a Workspace Task Counter screen. The `Scaffold` widget provides the foundational layout that hosts a top header bar, a centered main display area, and a persistent action trigger at the bottom without needing manual positioning or coordinate calculations.
@@ -53,7 +53,6 @@ To demonstrate each attribute, I started with only the `body` and then uncomment
 
 ## Sources
 - Flutter documentation – Scaffold class: https://api.flutter.dev/flutter/material/Scaffold-class.html
-- [Any tutorial or video you used, with link]
 
 ## AI Use Disclosure
 I used Claude (Anthropic) to format my own written notes into this README layout and to add short comments to `lib/main.dart`. The app code, use case, attribute explanations and presentation were written by me.

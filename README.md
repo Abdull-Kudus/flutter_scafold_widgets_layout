@@ -1,74 +1,59 @@
-# Flutter Widget Demo: Scaffold
+# Workspace Task Counter – Scaffold Demo
 
-A simple demonstration of Flutter's `Scaffold` widget for a standard mobile screen.
+**Widget:** `Scaffold` — the structural skeleton of a Flutter screen that hosts a top bar, a main content area and a floating action button without manual positioning.
 
----
+**In-class presentation date:** [add your date]
 
-## 1. Use Case
+## Use Case
+Every mobile screen requires a reliable structural skeleton so that UI elements do not overlap each other or get cut off by device status bars and notches. In this demo, I created a Workspace Task Counter screen. The `Scaffold` widget provides the foundational layout that hosts a top header bar, a centered main display area, and a persistent action trigger at the bottom without needing manual positioning or coordinate calculations.
 
-Every mobile screen needs a standard layout structure: a bar at the top, content in the middle, and an action button at the bottom. The `Scaffold` widget provides this exact visual skeleton out of the box so you do not have to position these elements manually.
+## How to Run
+1. Make sure Flutter is installed (`flutter doctor`).
+2. Clone the repo:
+   ```bash
+   git clone https://github.com/Abdull-Kudus/flutter_scafold_widgets_layout.git
+   cd flutter_scafold_widgets_layout
+   ```
+3. Get dependencies:
+   ```bash
+   flutter pub get
+   ```
+4. Run the app on an emulator, device or Chrome:
+   ```bash
+   flutter run
+   ```
 
----
+## The 3 Key Attributes of Scaffold
 
-## 2. Code
+| Attribute | Default | What it does on screen |
+|---|---|---|
+| `appBar` | `null` (no top bar) | Displays a fixed toolbar across the top edge of the device, handling system status bar spacing and screen titles automatically. |
+| `body` | `null` (empty screen) | Defines the primary viewing canvas of the screen between the top and bottom bars, holding layouts like columns, lists, or forms. |
+| `floatingActionButton` | `null` (no button) | Anchors a circular button above the bottom-right corner of the interface for primary user actions. |
 
-```dart
-import 'package:flutter/material.dart';
+To demonstrate each attribute, I started with only the `body` and then uncommented `appBar` and `floatingActionButton` one at a time.
 
-void main() {
-  runApp(const MaterialApp(
-    home: SimpleScreen(),
-  ));
-}
+## Screenshots
 
-class SimpleScreen extends StatelessWidget {
-  const SimpleScreen({super.key});
+**1. Body only**
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('My App'),
-        backgroundColor: Colors.blue,
-      ),
-      body: const Center(
-        child: Text(
-          'Hello, World!',
-          style: TextStyle(fontSize: 24),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
-      ),
-    );
-  }
-}
+![Scaffold with body only](screenshots/scafold_body_only.png)
 
-```
+**2. Body + appBar**
 
----
+![Scaffold with appBar](screenshots/scafold_with_appbar.png)
 
-## 3. Code Explanation
+**3. Body + floatingActionButton**
 
-First, I wrote the `main()` function to run the application wrapped in a `MaterialApp`.
+![Scaffold with floatingActionButton](screenshots/scafold_with_floatbutton.png)
 
-Next, I created `SimpleScreen` as a `StatelessWidget` because the screen displays static content without changing any state.
+**4. Final UI: body + appBar + floatingActionButton**
 
-Inside the `build` method, I returned the `Scaffold` widget to set up the basic layout frame of the screen.
+![Final Scaffold UI](screenshots/scafold_appbar_floatingbutton.png)
 
-I assigned an `AppBar` widget to the `appBar` property so that the app displays a blue navigation header with the title "My App".
+## Sources
+- Flutter documentation – Scaffold class: https://api.flutter.dev/flutter/material/Scaffold-class.html
+- [Any tutorial or video you used, with link]
 
-I passed a centered `Text` widget to the `body` property so the text "Hello, World!" sits directly in the center of the screen.
-
-Finally, I set the `floatingActionButton` property with a simple `FloatingActionButton` holding an add icon at the bottom corner.
-
----
-
-## 4. The 3 Key Attributes
-
-The `appBar` attribute places a fixed header toolbar at the top of the device screen.
-
-The `body` attribute defines the primary display area where the main content or layout sits.
-
-The `floatingActionButton` attribute adds a circular action button that floats near the bottom-right corner of the screen.
+## AI Use Disclosure
+I used Claude (Anthropic) to format my own written notes into this README layout and to add short comments to `lib/main.dart`. The app code, use case, attribute explanations and presentation were written by me.

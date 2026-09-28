@@ -54,6 +54,7 @@ class _TaskDashboardPageState extends State<TaskDashboardPage> {
           ],
         ),
       ),
+      // Attribute 3: floatingActionButton - main action button, bottom-right
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.indigo,

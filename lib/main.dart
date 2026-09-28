@@ -37,6 +37,7 @@ class _TaskDashboardPageState extends State<TaskDashboardPage> {
         backgroundColor: Colors.indigo,
         foregroundColor: Colors.white,
       ),
+      // Attribute 2: body - main content area of the screen
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

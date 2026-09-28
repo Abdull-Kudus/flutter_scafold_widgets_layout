@@ -16,6 +16,7 @@ class TaskManagerApp extends StatelessWidget {
   }
 }
 
+// Stateful because the task counter can change
 class TaskDashboardPage extends StatefulWidget {
   const TaskDashboardPage({super.key});
 
@@ -24,13 +25,7 @@ class TaskDashboardPage extends StatefulWidget {
 }
 
 class _TaskDashboardPageState extends State<TaskDashboardPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  int _counter = 0; // Tasks completed today
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +52,7 @@ class _TaskDashboardPageState extends State<TaskDashboardPage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {},
         backgroundColor: Colors.indigo,
         tooltip: 'Add Task',
         child: const Icon(Icons.add, color: Colors.white),

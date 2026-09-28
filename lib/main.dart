@@ -29,7 +29,9 @@ class _TaskDashboardPageState extends State<TaskDashboardPage> {
 
   @override
   Widget build(BuildContext context) {
+    // Scaffold is the main layout structure of the screen
     return Scaffold(
+      // Attribute 1: appBar - top toolbar with the screen title
       appBar: AppBar(
         title: const Text('Workspace Dashboard'),
         backgroundColor: Colors.indigo,

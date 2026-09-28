@@ -1,6 +1,6 @@
-# Workspace Task Counter – Scaffold Demo
+# Workspace Task Counter: Scaffold Demo
 
-**Widget:** `Scaffold` — the structural skeleton of a Flutter screen that hosts a top bar, a main content area and a floating action button without manual positioning.
+**Widget:** `Scaffold`: the structural skeleton of a Flutter screen that hosts a top bar, a main content area and a floating action button without manual positioning.
 
 **In-class presentation date:** September 28, 2026
 

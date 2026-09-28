@@ -49,7 +49,7 @@ class SimpleScreen extends StatelessWidget {
 
 ---
 
-## 3. Code Explanation (As Me)
+## 3. Code Explanation
 
 First, I wrote the `main()` function to run the application wrapped in a `MaterialApp`.
 
@@ -72,21 +72,3 @@ The `appBar` attribute places a fixed header toolbar at the top of the device sc
 The `body` attribute defines the primary display area where the main content or layout sits.
 
 The `floatingActionButton` attribute adds a circular action button that floats near the bottom-right corner of the screen.
-
----
-
-## 5. Presentation Script (3–5 Minutes)
-
-"Hello everyone. Today, I am presenting the `Scaffold` widget in Flutter.
-
-The use case here is very straightforward: whenever you build any basic screen in a mobile app, you need a header, a main content area, and an action button. Without `Scaffold`, elements would overlap each other or get cut off by the phone's status bar. `Scaffold` provides that standard framework automatically.
-
-In my code, I created a single screen called `SimpleScreen`. Inside its `build` method, I returned a `Scaffold` widget and configured its three most essential attributes.
-
-First is `appBar`. By passing an `AppBar` widget here, Flutter automatically reserves space at the top of the phone and renders our title, 'My App', with a clean blue background.
-
-Second is `body`. This is where your main screen content lives. I placed a simple centered text widget saying 'Hello, World!' right in the middle of the screen.
-
-Third is `floatingActionButton`. This attribute gives us an elevated circular button in the bottom corner, which is standard for primary actions like creating or adding new items.
-
-In short, `Scaffold` is the foundational building block for creating clean, standard screens in Flutter without manually styling positions.
